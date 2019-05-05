@@ -15,7 +15,3 @@ report_path = os.path.join(filepath.report_dir, report_name)
 with open(report_path, 'wb+') as file:
     runner = HTMLTestRunner(stream=file, title='测试报告', description='api测试')
     runner.run(discover)
-    
-    
-    
-    qqqqqq
