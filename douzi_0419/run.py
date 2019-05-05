@@ -2,15 +2,14 @@
 # @Author  ： 豆子
 
 import sys
+
+sys.path.append('./')
+
 import time
 import unittest
 import os
 from HTMLTestRunner import HTMLTestRunner
 from douzi_0419.commons import filepath
-
-# a = sys.path
-# print(a)
-sys.path.append('./')
 
 discover = unittest.defaultTestLoader.discover(filepath.case_dir, 'test*.py')
 now = time.strftime('%Y%m%d_%H%M%S', time.localtime(time.time()))
