@@ -1,0 +1,112 @@
+2019-05-12 12:04:34,144 - test_case.test_register - INFO - [logprase.py:41] - 日志信息：注册用例执行之前，13000000213 手机号尚未注册
+2019-05-12 12:04:34,250 - test_case.test_register - ERROR - [logprase.py:53] - 日志信息：None
+Traceback (most recent call last):
+  File "E:\PyCharm\helpers\pycharm\teamcity\diff_tools.py", line 32, in _patched_equals
+    old(self, first, second, msg)
+  File "E:\Python\lib\unittest\case.py", line 821, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "E:\Python\lib\unittest\case.py", line 1194, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "E:\Python\lib\unittest\case.py", line 666, in fail
+    raise self.failureException(msg)
+AssertionError: '10001' != '20109'
+- 10001
++ 20109
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\eclipse-workspace\python-unittest\douzi_0419\test_case\test_register.py", line 80, in test_register
+    self.assertEqual(str(case.expected), self.session.get_json_code())
+  File "E:\PyCharm\helpers\pycharm\teamcity\diff_tools.py", line 38, in _patched_equals
+    raise error
+teamcity.diff_tools.EqualsAssertionError:  :: 10001 != 20109
+2019-05-12 12:04:34,253 - test_case.test_register - INFO - [logprase.py:41] - 日志信息：测试模块：register，测试用例id：1，测试目的：输入格式正确的手机号密码，注册成功，请求响应结果：{"status":0,"code":"20109","data":null,"msg":"手机号码格式不正确"}，执行结果：Fail
+2019-05-12 12:04:34,538 - test_case.test_register - INFO - [logprase.py:41] - 日志信息：注册用例执行之前，13000000023 手机号尚未注册
+2019-05-12 12:04:34,639 - test_case.test_register - INFO - [logprase.py:41] - 日志信息：测试模块：register，测试用例id：2，测试目的：手机号为空，注册失败，请求响应结果：{"status":0,"code":"20103","data":null,"msg":"手机号不能为空"}，执行结果：Pass
+2019-05-12 12:04:34,786 - test_case.test_register - INFO - [logprase.py:41] - 日志信息：注册用例执行之前，13000000545 手机号尚未注册
+2019-05-12 12:04:34,879 - test_case.test_register - INFO - [logprase.py:41] - 日志信息：测试模块：register，测试用例id：3，测试目的：密码为空，注册失败，请求响应结果：{"status":0,"code":"20103","data":null,"msg":"密码不能为空"}，执行结果：Pass
+2019-05-12 12:04:35,002 - test_case.test_register - INFO - [logprase.py:41] - 日志信息：注册用例执行之前，13000000843 手机号尚未注册
+2019-05-12 12:04:35,093 - test_case.test_register - INFO - [logprase.py:41] - 日志信息：测试模块：register，测试用例id：4，测试目的：手机号格式正确，密码长的等于5，注册失败，请求响应结果：{"status":0,"code":"20108","data":null,"msg":"密码长度必须为6~18"}，执行结果：Pass
+2019-05-12 12:04:35,247 - test_case.test_register - INFO - [logprase.py:41] - 日志信息：注册用例执行之前，13000000278 手机号尚未注册
+2019-05-12 12:04:35,348 - test_case.test_register - INFO - [logprase.py:41] - 日志信息：测试模块：register，测试用例id：5，测试目的：手机号格式正确，密码长的等于19，注册失败，请求响应结果：{"status":0,"code":"20108","data":null,"msg":"密码长度必须为6~18"}，执行结果：Pass
+2019-05-12 12:04:35,486 - test_case.test_register - INFO - [logprase.py:41] - 日志信息：注册用例执行之前，13000000171 手机号尚未注册
+2019-05-12 12:04:35,536 - test_case.test_register - ERROR - [logprase.py:53] - 日志信息：None
+Traceback (most recent call last):
+  File "E:\PyCharm\helpers\pycharm\teamcity\diff_tools.py", line 32, in _patched_equals
+    old(self, first, second, msg)
+  File "E:\Python\lib\unittest\case.py", line 821, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "E:\Python\lib\unittest\case.py", line 1194, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "E:\Python\lib\unittest\case.py", line 666, in fail
+    raise self.failureException(msg)
+AssertionError: '10001' != '20109'
+- 10001
++ 20109
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\eclipse-workspace\python-unittest\douzi_0419\test_case\test_register.py", line 80, in test_register
+    self.assertEqual(str(case.expected), self.session.get_json_code())
+  File "E:\PyCharm\helpers\pycharm\teamcity\diff_tools.py", line 38, in _patched_equals
+    raise error
+teamcity.diff_tools.EqualsAssertionError:  :: 10001 != 20109
+2019-05-12 12:04:35,537 - test_case.test_register - INFO - [logprase.py:41] - 日志信息：测试模块：register，测试用例id：6，测试目的：手机号格式正确，密码长的等于6，注册成功，请求响应结果：{"status":0,"code":"20109","data":null,"msg":"手机号码格式不正确"}，执行结果：Fail
+2019-05-12 12:04:35,728 - test_case.test_register - INFO - [logprase.py:41] - 日志信息：注册用例执行之前，13000000037 手机号尚未注册
+2019-05-12 12:04:35,775 - test_case.test_register - ERROR - [logprase.py:53] - 日志信息：None
+Traceback (most recent call last):
+  File "E:\PyCharm\helpers\pycharm\teamcity\diff_tools.py", line 32, in _patched_equals
+    old(self, first, second, msg)
+  File "E:\Python\lib\unittest\case.py", line 821, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "E:\Python\lib\unittest\case.py", line 1194, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "E:\Python\lib\unittest\case.py", line 666, in fail
+    raise self.failureException(msg)
+AssertionError: '10001' != '20109'
+- 10001
++ 20109
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\eclipse-workspace\python-unittest\douzi_0419\test_case\test_register.py", line 80, in test_register
+    self.assertEqual(str(case.expected), self.session.get_json_code())
+  File "E:\PyCharm\helpers\pycharm\teamcity\diff_tools.py", line 38, in _patched_equals
+    raise error
+teamcity.diff_tools.EqualsAssertionError:  :: 10001 != 20109
+2019-05-12 12:04:35,776 - test_case.test_register - INFO - [logprase.py:41] - 日志信息：测试模块：register，测试用例id：7，测试目的：手机号格式正确，密码长的等于18，注册成功，请求响应结果：{"status":0,"code":"20109","data":null,"msg":"手机号码格式不正确"}，执行结果：Fail
+2019-05-12 12:04:35,973 - test_case.test_register - INFO - [logprase.py:41] - 日志信息：注册用例执行之前，13000000393 手机号尚未注册
+2019-05-12 12:04:36,065 - test_case.test_register - INFO - [logprase.py:41] - 日志信息：测试模块：register，测试用例id：8，测试目的：手机号格式不正确，密码不为空，注册失败，请求响应结果：{"status":0,"code":"20109","data":null,"msg":"手机号码格式不正确"}，执行结果：Pass
+2019-05-12 12:04:36,180 - test_case.test_register - INFO - [logprase.py:41] - 日志信息：注册用例执行之前，13000000383 手机号尚未注册
+2019-05-12 12:04:36,230 - test_case.test_register - ERROR - [logprase.py:53] - 日志信息：None
+Traceback (most recent call last):
+  File "E:\PyCharm\helpers\pycharm\teamcity\diff_tools.py", line 32, in _patched_equals
+    old(self, first, second, msg)
+  File "E:\Python\lib\unittest\case.py", line 821, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "E:\Python\lib\unittest\case.py", line 1194, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "E:\Python\lib\unittest\case.py", line 666, in fail
+    raise self.failureException(msg)
+AssertionError: '20110' != '20109'
+- 20110
+?    -
++ 20109
+?     +
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\eclipse-workspace\python-unittest\douzi_0419\test_case\test_register.py", line 80, in test_register
+    self.assertEqual(str(case.expected), self.session.get_json_code())
+  File "E:\PyCharm\helpers\pycharm\teamcity\diff_tools.py", line 38, in _patched_equals
+    raise error
+teamcity.diff_tools.EqualsAssertionError:  :: 20110 != 20109
+2019-05-12 12:04:36,231 - test_case.test_register - INFO - [logprase.py:41] - 日志信息：测试模块：register，测试用例id：9，测试目的：手机号已被注册，注册失败，请求响应结果：{"status":0,"code":"20109","data":null,"msg":"手机号码格式不正确"}，执行结果：Fail

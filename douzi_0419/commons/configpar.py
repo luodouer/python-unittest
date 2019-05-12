@@ -1,26 +1,29 @@
 # encoding=utf_8
 # @Author   ： 豆子
-# @Function :  config文件解析
+# @Function :  配置文件解析
+
 
 from configparser import ConfigParser
-from douzi_0419.commons import filepath
-import os
 
 
 class ConfigPar:
-    def __init__(self):
+    def __init__(self, filename):
+        self.filename = filename
         self.cp = ConfigParser()
-        filename = os.path.join(filepath.configs_dir, 'global.conf')
         self.cp.read(filenames=filename, encoding='utf-8')
-        if self.cp.getboolean('switch', 'on'):
-            self.filename = os.path.join(filepath.configs_dir, 'online.conf')
-            self.cp.read(filenames=self.filename, encoding='utf-8')
-        else:
-            self.filename = os.path.join(filepath.configs_dir, 'test.conf')
-            self.cp.read(filenames=self.filename, encoding='utf-8')
 
     def has_section(self, section):
+        '''
+        :param section: 要查找的section
+        :return: 存在，返回True，不存在，返回False
+        '''
         if self.cp.has_section(section):
+            return True
+        else:
+            return False
+
+    def has_option(self, section, option):
+        if self.cp.has_option(section, option):
             return True
         else:
             return False
@@ -36,20 +39,16 @@ class ConfigPar:
 
     def add_section(self, section):
         self.cp.add_section(section)
-        self.write(self.filename)
 
     def set(self, section, option, value):
         self.cp.set(section, option, value)
-        self.write(self.filename)
-
-    def write(self, filename):
-        with open(filename, 'w') as f:
+        with open(self.filename, 'w') as f:
             self.cp.write(f)
 
 
 if __name__ == '__main__':
     # constant_dir = os.path.join(constant.configs_dir, 'test.conf')
-    # ConfigPar().get('api', 'url')
-    a = ConfigPar().get('api', 'url')
+    ConfigPar().get('api', 'url')
+    a = ConfigPar().get('login', 'mobilephone')
     print(a)
     print(type(a))

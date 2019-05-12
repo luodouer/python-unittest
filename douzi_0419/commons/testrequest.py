@@ -4,7 +4,7 @@
 
 import json
 import requests
-from douzi_0419.commons.configpar import ConfigPar
+from douzi_0419.commons.testenswitch import TestEnSwitch
 
 
 class TestHttpRequest(object):
@@ -16,7 +16,7 @@ class TestHttpRequest(object):
         method = method.lower()
         if isinstance(data, str):
             data = json.loads(data)
-        url = ConfigPar().get('api', 'url') + url
+        url = TestEnSwitch().get('api', 'url') + url
         if method == 'get':
             self.req = self.session.request(url=url, method=method, params=data, json=jsons, headers=headers)
         elif method == 'post':

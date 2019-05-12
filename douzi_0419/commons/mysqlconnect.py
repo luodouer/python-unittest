@@ -3,18 +3,18 @@
 # @Function ： 数据库连接查询
 
 import pymysql
-from douzi_0419.commons.configpar import ConfigPar
+from douzi_0419.commons.testenswitch import TestEnSwitch
 
 
 class MySqlConnect:
     def __init__(self):
-        cp = ConfigPar()
+        cp = TestEnSwitch()
         host = cp.get('mysql', 'host')
         port = cp.getint('mysql', 'port')
         user = cp.get('mysql', 'user')
         pwd = cp.get('mysql', 'pwd')
         self.mysql = pymysql.connect(host=host, user=user, password=pwd, port=port)
-        self.cur = self.mysql.cursor()
+        self.cur = self.mysql.cursor(pymysql.cursors.DictCursor)
 
     def fetch_one(self, sql):
         self.cur.execute(sql)
